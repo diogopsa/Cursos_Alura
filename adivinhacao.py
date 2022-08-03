@@ -1,17 +1,21 @@
-#joguinho para acertar o número
 print("*************************************")
 print("Bem vindo ao jogo!")
 print("*************************************")
 numero_secreto = 42
-chute = int(input("Digite o seu chute: "))
-acertou = chute == numero_secreto
-maior = chute > numero_secreto
-if (acertou):
-    print("Parabéns!! Você acertou!")
-else:
-    if (maior):
-        print("O número que você chutou é maior que o número secreto!!")
+rodada = 1
+total_de_tentativas = 3
+while rodada <= total_de_tentativas:
+    print("Tentativa {} de {}".format(rodada,total_de_tentativas))
+    chute = int(input("Digite o seu chute: "))
+    acertou = chute == numero_secreto
+    maior = chute > numero_secreto
+    if (acertou):
+        print("Parabens!! Voce acertou!")
     else:
-        print("O número que você chutou é menor que o número secreto!!")
-    print("Que pena, não foi dessa vez! Você errou!")
+        if (maior):
+            print("O numero que voce chutou foi maior que o numero secreto!!")
+        else:
+            print("O numero que voce chutou foi menor que o numero secreto!!")
+        print("Que pena, nao foi dessa vez! Voce errou!")
+    rodada = rodada +1
 print("Fim do jogo")
