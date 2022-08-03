@@ -6,7 +6,6 @@ numero_secreto = 42
 chute = int(input("Digite o seu chute: "))
 acertou = chute == numero_secreto
 maior = chute > numero_secreto
-
 if (acertou):
     print("Parabéns!! Você acertou!")
 else:
